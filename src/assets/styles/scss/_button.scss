@@ -1,0 +1,48 @@
+@use '../scss/flexbox';
+
+.light-button {
+    button {
+        padding: 5px 10px;
+        background-color: var(--bg-light-3);
+        border: none;
+        @include pointer;
+        @include text;
+        color: var(--dark-black);
+    }
+}
+
+.green-button {
+    button {
+        padding: 11px 30px;
+        @include text-bold;
+        color: var(--bg-white);
+        background-color: var(--green-bg);
+        border: none;
+        border-radius: 5px;
+        @include pointer;
+    }
+}
+
+.red-button {
+    button {
+        padding: 11px 30px;
+        @include text-bold;
+        color: var(--bg-white);
+        background-color: var(--danger-bg);
+        border: none;
+        border-radius: 5px;
+        @include pointer;
+    }
+}
+
+.blue-button {
+    button {
+        padding: 11px 30px;
+        @include text-bold;
+        color: var(--bg-white);
+        background-color: var(--text-blue);
+        border: none;
+        border-radius: 5px;
+        @include pointer;
+    }
+}

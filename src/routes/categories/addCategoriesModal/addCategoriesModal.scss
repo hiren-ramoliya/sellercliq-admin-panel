@@ -1,0 +1,116 @@
+@import "../../../assets/styles/mixins/global.scss";
+
+.add-categories-modal-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 9999999;
+  height: 100%;
+  @include flex-center;
+  justify-content: center;
+
+  .add-categories-modal {
+    width: 814px;
+    background-color: var(--bg-white);
+    border-radius: 10px;
+
+    .modal-body {
+      padding: 26px;
+      height: calc(100vh - 200px);
+      overflow: auto;
+
+      .green-button {
+        @include flex-center;
+        justify-content: flex-end;
+      }
+
+      .upload-image {
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+        width: 100%;
+        @include flex-center;
+        justify-content: center;
+        height: 259px;
+        margin: 0 0 26px 0;
+
+        .upload-text {
+          span {
+            @include text-sm;
+            @include font-medium;
+            display: block;
+            @include text-center;
+            @include pointer;
+            color: var(--text-blue);
+          }
+
+          input {
+            opacity: 0;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: -87px;
+            width: 226px;
+          }
+        }
+
+        .image-center-alignment {
+          padding: 13px 0 0 0;
+        }
+      }
+
+      .form-control {
+        padding: 0 0 26px 0;
+      }
+    }
+
+    .modal-header {
+      border-bottom: 1px solid var(--border-color);
+      padding: 32px 26px;
+      @include flex-center;
+      justify-content: space-between;
+
+      img {
+        @include pointer;
+      }
+
+      h5 {
+        @include heading-4;
+        color: var(--dark-black);
+        margin: 0;
+      }
+    }
+  }
+
+  .custom-select {
+    width: 762px;
+    height: 54px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+    padding-left: 16px;
+    padding-right: 28px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    p {
+      flex: 1;
+    }
+  }
+  .options-container {
+    margin-top: 10px;
+  }
+  .input-select-options {
+    cursor: pointer;
+    width: 100%;
+    padding: 0 22px;
+    background-color: var(--bg-light-3);
+    height: 57px;
+    @include text-sm;
+    color: var(--light-text-4);
+    vertical-align: center !important;
+    display: flex;
+    align-items: center;
+  }
+}

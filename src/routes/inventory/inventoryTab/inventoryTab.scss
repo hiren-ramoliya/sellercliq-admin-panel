@@ -1,0 +1,56 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.inventroy-tab-content-alignment {
+    @include flex-center;
+    padding: 26px 36px;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+
+    ul {
+        margin: 0;
+        padding: 0;
+        @include flex-center;
+        list-style: none;
+
+        li {
+            @include text;
+            color: var(--gray-6);
+            margin-right: 40px;
+            transition: .3s ease-in-out;
+            @include pointer;
+
+            &:hover {
+                color: var(--dark-black);
+                transition: .3s ease-in-out;
+            }
+        }
+
+        li:last-child {
+            margin: 0;
+        }
+    }
+
+    .location-content-alignment {
+        @include flex-center;
+        @include pointer;
+
+        div:first-child {
+            padding-right: 16px;
+        }
+
+        div:last-child {
+            padding-left: 10px;
+        }
+
+        div {
+            @include flex-center;
+
+            span {
+                @include text-sm;
+                color: var(--dark-black);
+                display: block;
+            }
+        }
+
+    }
+}

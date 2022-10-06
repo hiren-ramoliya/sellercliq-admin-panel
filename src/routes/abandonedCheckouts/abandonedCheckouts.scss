@@ -1,0 +1,73 @@
+@import '../../assets/styles/mixins/global.scss';
+
+.abandoned-checkouts-section-alignment {
+
+    .learn-more-button-center-alignment {
+        padding: 70px 0;
+        @include flex-center;
+        justify-content: center;
+
+        button {
+            border: 1px solid var(--border-color);
+            background-color: transparent;
+            @include text-sm;
+            @include flex-center;
+            justify-content: center;
+            border-radius: 9999px;
+            @include pointer;
+            padding: 20px 75px;
+            @include font-medium;
+
+            span {
+                color: var(--black-2);
+                padding-left: 13px;
+
+                a {
+                    color: var(--text-blue);
+                }
+            }
+        }
+    }
+
+    .page-header-alignment {
+        padding: 40px 0;
+        @include flex-center;
+        justify-content: space-between;
+
+        div {
+            h1 {
+                @include heading-4;
+                color: var(--dark-black);
+                margin: 0;
+            }
+        }
+    }
+
+    .empty-box {
+        background-color: var(--bg-white);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+        border-radius: 10px;
+        padding: 170px 0 150px 0;
+
+        .icon-center-alignment {
+            @include flex-center;
+            justify-content: center;
+            padding: 0 0 55px 0;
+        }
+
+        h2 {
+            @include heading-4;
+            color: var(--black-2);
+            @include text-center;
+            margin: 0 0 22px 0;
+        }
+
+        p {
+            max-width: calc(492px);
+            @include text;
+            color: #6d7175;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+}

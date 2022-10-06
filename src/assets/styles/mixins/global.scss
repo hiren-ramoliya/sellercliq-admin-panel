@@ -1,0 +1,52 @@
+@import "./../mixins/typography";
+
+@import "./../function/columns";
+
+@import "./../layout/container";
+
+@import "./../mixins/columns";
+
+@import "./../mixins/breakpoint";
+
+@import "./../mixins/index";
+
+@import "./../mixins/function";
+
+@import "./../scss/flexbox";
+
+@import "./../scss/input";
+
+@import "./../scss/button";
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 246px 1fr;
+  gap: 0;
+}
+
+.layout-alignment {
+  padding: 0 43px;
+}
+
+.pad-top-25 {
+  padding-top: 25px;
+}
+.pt10 {
+  padding-top: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+.b-none {
+  border: none;
+}
+
+.col6 {
+  width: 50%;
+}
+
+.col-center {
+  display: flex;
+  justify-content: center;
+}

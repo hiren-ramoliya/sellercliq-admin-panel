@@ -1,0 +1,159 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.import-customer-csv-details-modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 9999999;
+    height: 100%;
+    @include flex-center;
+    justify-content: center;
+
+    .modal-md {
+        width: calc(814px);
+        background-color: var(--bg-white);
+        border-radius: 10px;
+
+        .modal-footer {
+            padding: 26px;
+            @include flex-center;
+            justify-content: flex-end;
+
+            button {
+                background-color: var(--danger-bg);
+                color: var(--bg-white);
+                @include pointer;
+                border: none;
+                border-radius: 5px;
+                @include text-sm;
+                @include font-bold;
+                padding: 11px 23px;
+            }
+        }
+
+        .export-segment-content-alignment {
+            padding: 26px;
+            border-bottom: 1px solid var(--border-color);
+
+            .export-segment-alignment {
+                padding: 6px 0 0 0;
+
+                button {
+                    background-color: var(--green-bg);
+                    color: var(--bg-white);
+                    padding: 10px 23px;
+                    @include pointer;
+                    border: none;
+                    border-radius: 5px;
+                    @include text-sm;
+                    @include font-medium;
+                }
+            }
+
+            .radio-button-text-alignment {
+                @include flex-center;
+                padding: 0 0 20px 0;
+
+                div+div {
+                    padding-left: 13px;
+                }
+
+                div {
+                    @include flex-center;
+
+                    input[type="radio"] {
+                        width: 20px;
+                        height: 20px;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    span {
+                        @include text-sm;
+                        color: var(--dark-black);
+                        display: block;
+
+                    }
+                }
+            }
+
+            .section-title-alignment {
+                @include flex-center;
+                padding: 0 0 18px 0;
+                @include pointer;
+
+                span {
+                    @include text-sm;
+                    color: var(--black-1);
+                    display: block;
+                    padding-right: 15px;
+                }
+
+                img {
+                    @include pointer;
+                }
+            }
+        }
+
+        .modal-email-information {
+            padding: 26px;
+            border-bottom: 1px solid var(--border-color);
+
+            .main-conent-alignment {
+                @include flex-center;
+
+                div+div {
+                    padding-left: 22px;
+                }
+
+                div {
+                    p {
+                        @include text-sm;
+                        color: var(--black-1);
+                        @include font-medium;
+                        margin: 0 0 6px 0;
+                    }
+
+                    span {
+                        @include text-sm;
+                        color: var(--black-1);
+                        padding: 0;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .modal-header {
+            padding: 32px 26px;
+            border-bottom: 1px solid var(--border-color);
+
+            .header-child-text {
+                padding: 10px 0 0 0;
+
+                p {
+                    @include text-sm;
+                    color: var(--black-1);
+                    margin: 0;
+                }
+            }
+
+            .header-alignment {
+                @include flex-center;
+                justify-content: space-between;
+            }
+
+            h1 {
+                @include heading-4;
+                color: var(--dark-black);
+                margin: 0;
+            }
+        }
+
+        img {
+            @include pointer;
+        }
+    }
+}

@@ -1,0 +1,145 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.order-preview-header-section-alignment {
+    @include flex-center;
+    justify-content: space-between;
+    padding: 32px 0 18px 0;
+
+    .right-content-alignment {
+        @include flex-center;
+
+        .refund-text {
+            padding-right: 41px;
+
+            span {
+                color: var(--dark-black);
+                @include text-sm;
+                @include font-medium;
+                display: block;
+
+            }
+        }
+
+        .left-right-arrow-box {
+            border: 1px solid rgba(32, 34, 35, 0.06);
+            border-radius: 5px;
+
+            button:first-child {
+                border-right: 1px solid rgba(32, 34, 35, 0.06) !important;
+            }
+
+            button {
+                height: 35px;
+                padding: 12px 21px;
+                background-color: transparent;
+                border: none;
+                @include pointer;
+            }
+        }
+
+        .more-action-alignment {
+            @include flex-center;
+            padding-right: 21px;
+
+            div {
+                @include flex-center;
+
+                span {
+                    @include text-sm;
+                    color: var(--dark-black);
+                    @include font-medium;
+                    @include pointer;
+                    padding-right: 10px;
+                    display: block;
+                }
+
+                img {
+                    @include pointer;
+                }
+            }
+        }
+
+        .edit-text-style {
+            padding-right: 41px;
+
+            span {
+                @include text-sm;
+                color: var(--dark-black);
+                @include font-medium;
+                @include pointer;
+                display: block;
+            }
+        }
+    }
+
+    .left-content-alignment {
+        @include flex-center;
+
+        .back-arrow {
+            width: 40px;
+            height: 35px;
+            border: 1px solid rgba(53, 53, 53, 0.6);
+            @include flex-center;
+            justify-content: center;
+            @include pointer;
+            border-radius: 5px;
+            margin-right: 16px;
+
+        }
+
+        button {
+            @include pointer;
+        }
+
+        .new-order-button {
+            button {
+                background-color: var(--danger-bg);
+                color: var(--bg-white);
+                padding: 4px 20px;
+                @include text-sm;
+                border-radius: 5px;
+                border: none;
+                @include font-bold;
+
+            }
+        }
+
+        .cod-button-style {
+            padding-right: 9px;
+
+            button {
+                padding: 4px 17px;
+                background-color: var(--green-bg);
+                color: var(--bg-white);
+                @include text-sm;
+                @include font-bold;
+                @include pointer;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+
+        .text-style {
+            padding-right: 15px;
+
+            span {
+                @include heading-4;
+                color: var(--black-1);
+                @include font-bold;
+                display: block;
+            }
+        }
+    }
+}
+
+.child-header-content-alignment {
+    padding: 0 0 23px 0;    
+
+    p {
+        @include text-sm;
+        padding-left: 56px;
+        color: var(--black-2);
+        opacity: .60;
+        margin: 0;
+    }
+}

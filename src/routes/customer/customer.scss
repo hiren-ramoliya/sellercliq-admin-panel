@@ -1,0 +1,41 @@
+@import '../../assets/styles/mixins/global.scss';
+
+.customer-all-content-alignment {
+    .page-title-alignment {
+        @include flex-center;
+        justify-content: space-between;
+        padding: 32px 0;
+
+        div+div {
+            @include flex-center;
+
+            button {
+                background-color: var(--green-bg);
+                color: var(--bg-white);
+                @include pointer;
+                @include text-bold;
+                border: none;
+                border-radius: 5px;
+                padding: 11px 33px;
+                border: none;
+            }
+        }
+
+        div {
+            h1 {
+                @include heading-4;
+                color: var(--dark-black);
+                margin: 0;
+            }
+
+            span {
+                @include text;
+                color: var(--dark-black);
+                display: block;
+                @include pointer;
+                padding-right: 40px;
+                @include font-medium;
+            }
+        }
+    }
+}

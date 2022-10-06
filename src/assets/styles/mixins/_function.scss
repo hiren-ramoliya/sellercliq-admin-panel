@@ -1,0 +1,57 @@
+$colors: (
+  purple: #8e277b,
+  light-blue: #25b0c4,
+  light-black: #000619,
+  gray: #5a596b,
+  light-gray: #5a596b,
+  gray1: #c4c4c4,
+  gray-2: #727272,
+  white: #fff,
+  light-backrgound: #eff8ff,
+  light-purple: #bf58ac,
+  border-color: #d0d0d0,
+  avtar-color: #f3f3f3,
+  pink-color: #f9ecf4,
+  purple-2: #b373e7,
+);
+
+@function color-show($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$weights: (
+  regular: 400,
+  mediua: 500,
+  bold: 600,
+);
+
+@function weight-show($weights-number) {
+  @return map-get($weights, $weights-number);
+}
+
+$size: (
+  sm: 5px,
+  md: 10px,
+  lg: 15px,
+  xl: 20px,
+);
+
+@function size-show($size-counter) {
+  @return map-get($size, $size-counter);
+}
+
+$css-use: (
+  flex: flex,
+  grid: grid,
+  relative: relative,
+  absolute: absolute,
+  pointer: pointer,
+  center: center,
+  hidden: hidden,
+  wfull: 100%,
+  fixed: fixed,
+);
+
+@function css-style($css-type) {
+  @return map-get($css-use, $css-type);
+}

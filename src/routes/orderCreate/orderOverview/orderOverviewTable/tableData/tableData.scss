@@ -1,0 +1,46 @@
+@import '../../../../../assets/styles/mixins/global.scss';
+
+.table-data-list-all-content-alignment {
+    table {
+        cursor: pointer;
+        width: 100%;
+        border-collapse: collapse;
+
+        tr {
+            border-bottom: 1px solid var(--border-color);
+
+            th:first-child {
+                padding-left: 25px;
+            }
+
+            th {
+                padding: 21px 10px;
+                @include text-sm;
+                color: var(--dark-black);
+                @include font-medium;
+            }
+
+            td:first-child {
+                padding-left: 25px;
+            }
+
+            .image-style {
+                img {
+                    @include pointer;
+                }
+            }
+
+            td {
+                padding: 21px 10px;
+
+                .data-list-style {
+                    span {
+                        @include text-sm;
+                        color: var(--dark-black);
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

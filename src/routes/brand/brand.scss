@@ -1,0 +1,19 @@
+@import '../../assets/styles/mixins/global.scss';
+
+.brand-section-alignment {
+    padding: 0 43px;
+
+    .header-alignment {
+        @include flex-center;
+        justify-content: space-between;
+        padding: 28px 0 34px 0;
+
+        div {
+            h1 {
+                @include heading-4;
+                color: var(--black-1);
+                margin: 0;
+            }
+        }
+    }
+}

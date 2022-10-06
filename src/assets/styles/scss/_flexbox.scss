@@ -1,0 +1,10 @@
+@mixin flex-center {
+    display: map-get($layout, flex );
+    align-items: map-get($layout, center );
+}
+
+@mixin flex-between {
+    @include flex-center();
+    justify-content: space-between;
+}
+

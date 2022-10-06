@@ -1,0 +1,134 @@
+@import "../../assets/styles/mixins/global.scss";
+
+.header {
+  padding: 17px 0;
+  background-color: var(--bg-white);
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+
+  .header-alignment {
+    @include flex-center;
+    justify-content: space-between;
+
+    .search-icon-alignment {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include flex-center;
+      left: 25px;
+    }
+
+    .logo {
+      img {
+        @include pointer;
+      }
+    }
+
+    .message {
+      flex: 1;
+      margin-left: 113px;
+      color: white;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 54px;
+    }
+
+    .profile-content {
+      @include flex-center;
+
+      .profile-grid {
+        grid-template-columns: 37px 1fr;
+        gap: 13px;
+
+        .profile-grid-items {
+          .dummy-icon {
+            @include pointer;
+          }
+
+          span {
+            @include text-sm;
+            color: var(--black-2);
+            display: block;
+          }
+
+          p {
+            @include text-xs;
+            color: var(--gray-1);
+            margin: 0;
+          }
+        }
+      }
+
+      .icon-round-design {
+        width: 34px;
+        height: 34px;
+        margin-right: 12px;
+        @include flex-center;
+        justify-content: center;
+        border-radius: 50%;
+        @include pointer;
+        background-color: var(--bg-light-2);
+      }
+
+      .header-buttons {
+        @include flex-center;
+        justify-content: center;
+
+        button {
+          color: var(--bg-white);
+          border-radius: 5px;
+          min-width: 97px;
+          min-height: 42px;
+          font-size: 16px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 600;
+          cursor: pointer;
+        }
+      }
+
+      .discard-button {
+        margin-right: 18px;
+        button {
+          background-color: transparent;
+          border: 1px solid #ffffff;
+        }
+      }
+
+      .save-button {
+        button {
+          background-color: var(--green-bg);
+          border: none;
+        }
+      }
+    }
+
+    .input-relativ {
+      width: 510px;
+      position: relative;
+
+      input {
+        width: 100%;
+        height: 54px;
+        border: none;
+        background-color: var(--bg-light);
+        padding-left: 59px;
+        color: var(--light-text);
+        padding-right: 14px;
+        @include text-sm;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      ::placeholder {
+        @include text-sm;
+        color: var(--light-text);
+      }
+    }
+  }
+}

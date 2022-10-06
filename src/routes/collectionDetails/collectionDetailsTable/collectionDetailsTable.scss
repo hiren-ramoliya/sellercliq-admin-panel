@@ -1,0 +1,161 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.collection-details-table-alignment {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 419px;
+        gap: 21px;
+
+        .grid-items {
+            .collection-type-box {
+                background-color: var(--bg-white);
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+                border-radius: 10px;
+                padding: 26px;
+                margin: 0 0 21px 0;
+
+                .date-time-text {
+                    h5 {
+                        @include text-sm;
+                        color: var(--black-1);
+                        @include font-medium;
+                        margin: 26px 0 16px 0;
+                    }
+
+
+                    .input-grid {
+                        display: grid;
+                        gap: 16px;
+                        padding: 0 0 26px 0;
+                        grid-template-columns: 198px 198px 198px;
+                    }
+                }
+
+                .radio-text-alignment-for-all {
+                    border-bottom: 1px solid var(--border-color);
+
+                    .radio-text-alignment {
+                        display: flex;
+                        padding: 0 0 20px 0;
+
+                        div+div {
+                            padding-left: 16px;
+                        }
+                    }
+
+                    div {
+                        h4 {
+                            @include text-sm;
+                            color: var(--black-1);
+                            margin: 0 0 10px 0;
+                        }
+
+                        span {
+                            @include text-sm;
+                            color: var(--gray-6);
+                            display: block;
+
+                            a {
+                                color: var(--text-blue);
+                                @include pointer;
+                            }
+                        }
+                    }
+
+                    input[type="radio"] {
+                        width: 20px;
+                        height: 20px;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+
+                p {
+                    @include text-bold;
+                    color: var(--black-1);
+                    @include font-medium;
+                    margin: 0 0 26px 0;
+                }
+            }
+
+            .title-dec-box {
+                background-color: var(--bg-white);
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+                border-radius: 10px;
+                padding: 26px;
+                margin: 0 0 21px 0;
+
+                .form-control {
+                    padding: 0 0 24px 0;
+                }
+            }
+
+            .collection-banner-box {
+                background-color: var(--bg-white);
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+                border-radius: 10px;
+                padding: 26px;
+
+                .add-image-style {
+                    border: 1px dashed rgba(0, 0, 0, 0.3);
+                    @include pointer;
+                    @include flex-center;
+                    justify-content: center;
+                    border-radius: 5px;
+                    height: 163px;
+
+                    span {
+                        @include text-xs;
+                        color: var(--gray-6);
+                        display: block;
+                        @include text-center;
+                    }
+
+                    .button-center-alignment {
+                        @include flex-center;
+                        justify-content: center;
+                        padding: 0 0 10px 0;
+
+                        button {
+                            border: none;
+                            background: #F5F7F9;
+                            border-radius: 5px;
+                            padding: 7px 20px;
+                            color: var(--text-blue);
+                            @include text-sm;
+                            @include pointer;
+                        }
+                    }
+                }
+
+                p {
+                    @include text-bold;
+                    color: var(--dark-black);
+                    margin: 0 0 26px 0;
+                }
+            }
+
+            .collection-avaliabilty-box {
+                background-color: var(--bg-white);
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+                border-radius: 10px;
+                margin: 0 0 21px 0;
+                padding: 26px;
+
+                p {
+                    @include text;
+                    color: var(--dark-black);
+                    @include font-medium;
+                    margin: 0 0 23px 0;
+                }
+
+                span {
+                    @include text-sm;
+                    color: var(--gray-6);
+                    display: block;
+                }
+            }
+
+        }
+    }
+}

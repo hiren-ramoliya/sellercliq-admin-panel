@@ -1,0 +1,69 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.order-overview-section-alignment {
+    .overview-page-title {
+        @include flex-center;
+        justify-content: space-between;
+        padding: 32px 0;
+
+        div {
+            h1 {
+                @include heading-4;
+                color: var(--dark-black);
+                margin: 0;
+                @include font-medium;
+            }
+        }
+
+        div+div {
+            @include flex-center;
+
+            span {
+                padding-right: 40px;
+                @include text;
+                color: var(--dark-black);
+                @include font-medium;
+                @include pointer;
+            }
+        }
+
+        .create-order-button {
+            button {
+                background-color: var(--green-bg);
+                color: var(--bg-white);
+                padding: 11px 36px;
+                @include pointer;
+                @include text-bold;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.learn-more-button-center-alignment {
+    padding: 70px 0;
+    @include flex-center;
+    justify-content: center;
+
+    button {
+        border: 1px solid var(--border-color);
+        background-color: transparent;
+        @include text-sm;
+        @include flex-center;
+        justify-content: center;
+        border-radius: 9999px;
+        @include pointer;
+        padding: 20px 75px;
+        @include font-medium;
+
+        span {
+            color: var(--black-2);
+            padding-left: 13px;
+
+            a {
+                color: var(--text-blue);
+            }
+        }
+    }
+}

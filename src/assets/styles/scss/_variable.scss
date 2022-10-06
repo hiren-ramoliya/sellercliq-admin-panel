@@ -1,0 +1,26 @@
+$layout:(
+    grid:grid,
+    flex:flex,
+    center:center,
+    pointer:pointer,
+    block:block,
+    relative:relative,
+    absolute:absolute,
+    none:none,
+    left:left,
+    right:right,
+    space-between:space-between,
+    space-around:space-around,
+    end:end,
+);
+
+$pixel:(
+    null:0px,
+    sm:5px,
+    md:10px,
+    lg:15px,
+    xl:20px,
+    w-full:100%,
+    h-full:100%,
+    h-screen:100vh,
+);

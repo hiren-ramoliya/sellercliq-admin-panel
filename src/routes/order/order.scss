@@ -1,0 +1,92 @@
+@import '../../assets/styles/mixins/global.scss';
+
+.order-page-section-alignment {
+    .page-title {
+        padding: 32px 0;
+
+        h1 {
+            @include heading-4;
+            color: var(--black-1);
+            margin: 0;
+        }
+    }
+
+    .learn-more-button-center-alignment {
+        padding: 70px 0;
+        @include flex-center;
+        justify-content: center;
+
+        button {
+            border: 1px solid var(--border-color);
+            background-color: transparent;
+            @include text-sm;
+            @include flex-center;
+            justify-content: center;
+            border-radius: 9999px;
+            @include pointer;
+            padding: 20px 75px;
+            @include font-medium;
+
+            span {
+                color: var(--black-2);
+                padding-left: 13px;
+
+                a {
+                    color: var(--text-blue);
+                }
+            }
+        }
+    }
+
+    .empty-order-see-box {
+        padding: 110px 0;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+        border-radius: 10px;
+        background-color: var(--bg-white);
+        @include flex-center;
+        justify-content: center;
+
+        .empty-order-box {
+            width: 415px;
+
+            .image-center-alignment {
+                @include flex-center;
+                padding: 0 0 5px 0;
+                justify-content: center;
+            }
+
+            h5 {
+                @include heading-5;
+                color: var(--dark-black);
+                @include text-center;
+                margin: 0 0 18px 0;
+            }
+
+            .button-center-alignment {
+                @include flex-center;
+                justify-content: center;
+
+                button {
+                    background-color: var(--green-bg);
+                    color: var(--bg-white);
+                    @include text-sm;
+                    border-radius: 10px;
+                    min-width: 230px;
+                    @include pointer;
+                    padding: 15px;
+                    @include font-bold;
+                    border: none;
+                }
+            }
+
+            p {
+                @include text-sm;
+                color: var(--light-text-3);
+                margin: 0;
+                @include text-center;
+                margin: 0 0 26px 0;
+            }
+        }
+
+    }
+}

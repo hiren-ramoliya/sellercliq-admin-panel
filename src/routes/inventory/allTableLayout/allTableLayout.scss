@@ -1,0 +1,7 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.all-table-layout-fix {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    background-color: var(--bg-white);
+}

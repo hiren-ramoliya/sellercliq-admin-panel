@@ -1,0 +1,250 @@
+@import "../../assets/styles/mixins/global.scss";
+
+.order-create-section-alignment {
+  .learn-more-button-center-alignment {
+    padding: 70px 0;
+    @include flex-center;
+    justify-content: center;
+
+    button {
+      border: 1px solid var(--border-color);
+      background-color: transparent;
+      @include text-sm;
+      @include flex-center;
+      justify-content: center;
+      border-radius: 9999px;
+      @include pointer;
+      padding: 20px 75px;
+      @include font-medium;
+
+      span {
+        color: var(--black-2);
+        padding-left: 13px;
+
+        a {
+          color: var(--text-blue);
+        }
+      }
+    }
+  }
+
+  .white-box {
+    background-color: var(--bg-white);
+    padding: 26px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 21px;
+
+      .grid-items {
+        .add-note-box {
+          border: 1px solid rgba(32, 34, 35, 0.06);
+          border-radius: 5px;
+          padding: 26px;
+
+          .alignment {
+            @include flex-center;
+
+            input {
+              @include text-sm;
+              width: 100%;
+              border: none;
+              letter-spacing: -0.02em;
+              display: block;
+              color: #a0a6b1;
+              padding-left: 13px;
+              height: fit-content;
+            }
+
+            input:focus {
+              border: none;
+              outline: none;
+            }
+          }
+        }
+
+        .same-box-design {
+          border: 1px solid var(--border-color-3);
+          padding: 26px;
+          margin: 0 0 21px 0;
+
+          h5 {
+            @include text;
+            color: var(--black-1);
+            margin: 0 0 16px 0;
+          }
+
+          .input-relative {
+            position: relative;
+
+            input {
+              cursor: pointer;
+              width: 100%;
+              padding: 0 22px;
+              border-radius: 5px;
+              background-color: var(--bg-light-3);
+              border: none;
+              height: 57px;
+              @include text-sm;
+              color: var(--black-2);
+
+              &:focus {
+                outline: none;
+              }
+            }
+
+            .icon-alignment {
+              position: absolute;
+              top: 50%;
+              @include pointer;
+              transform: translateY(-50%);
+              @include flex-center;
+              right: 32px;
+            }
+
+            ::placeholder {
+              @include text-sm;
+              color: var(--light-text-4);
+            }
+          }
+          .options-container {
+            margin-top: 10px;
+          }
+          .input-select-options {
+            cursor: pointer;
+            width: 100%;
+            padding: 0 22px;
+            background-color: var(--bg-light-3);
+            height: 57px;
+            @include text-sm;
+            color: var(--light-text-4);
+            vertical-align: center !important;
+            display: flex;
+            align-items: center;
+          }
+
+          .input-select-options:hover {
+            color: var(--text-blue);
+          }
+        }
+
+        .payment-box {
+          border: 1px solid var(--border-color-3);
+          border-radius: 5px;
+
+          .box-footer {
+            padding: 26px;
+
+            span {
+              @include text-sm;
+              color: var(--black-2);
+              display: block;
+            }
+          }
+
+          .payment-box-left-right-alignment {
+            padding: 26px 26px 40px 26px;
+            border-bottom: 1px solid rgba(32, 34, 35, 0.06);
+
+            .child-box-title {
+              h3 {
+                @include text;
+                color: var(--black-1);
+                margin: 0 0 26px 0;
+              }
+            }
+
+            table {
+              width: 100%;
+
+              tr:first-child {
+                td {
+                  color: var(--black-1);
+                  @include font-medium;
+                }
+              }
+
+              tr:last-child {
+                td {
+                  color: var(--black-1);
+                  @include font-medium;
+                }
+              }
+
+              tr {
+                td {
+                  @include text-sm;
+                  padding: 0 0 21px 0;
+                  color: rgba(0, 0, 0, 0.6);
+                }
+              }
+            }
+          }
+        }
+
+        .product-box {
+          border: 1px solid var(--border-color-3);
+          border-radius: 5px;
+          padding: 26px;
+          margin: 0 0 21px 0;
+
+          .light-button {
+            @include flex-center;
+            justify-content: flex-end;
+          }
+
+          .box-header-alignment {
+            @include flex-center;
+            padding: 0 0 32px 0;
+            justify-content: space-between;
+
+            div {
+              span {
+                @include text;
+                color: var(--black-1);
+                display: block;
+              }
+
+              p {
+                @include text-sm;
+                color: var(--text-blue);
+                display: block;
+                @include pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .box-title {
+    padding: 32px 0;
+    @include flex-center;
+
+    div + div {
+      padding-left: 10px;
+    }
+
+    div:first-child {
+      border: 1px solid var(--border-color-1);
+      width: 40px;
+      height: 35px;
+      @include flex-center;
+      justify-content: center;
+      border-radius: 5px;
+      @include pointer;
+    }
+
+    div {
+      h1 {
+        @include heading-4;
+        color: var(--dark-black);
+        margin: 0;
+      }
+    }
+  }
+}

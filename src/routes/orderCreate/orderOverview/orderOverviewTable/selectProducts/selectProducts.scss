@@ -1,0 +1,112 @@
+@import '../../../../../assets/styles/mixins/global.scss';
+
+.select-products-modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 9999999;
+    height: 100%;
+    @include flex-center;
+    justify-content: center;
+
+    .select-products-md {
+        width: calc(814px);
+        border-radius: 10px;
+        background-color: var(--bg-white);
+
+        .select-products-footer {
+            padding: 26px;
+            @include flex-center;
+            justify-content: flex-end;
+
+            button {
+                border: none;
+                color: var(--bg-white);
+                border-radius: 5px;
+                margin-right: 18px;
+                @include pointer;
+                padding: 11px 23px;
+                @include text-sm;
+                @include font-bold;
+            }
+
+            button:first-child {
+                background-color: var(--danger-bg);
+            }
+
+            button:nth-child(2) {
+                background-color: var(--text-blue);
+            }
+
+            button:last-child {
+                background-color: var(--green-bg);
+                margin: 0;
+            }
+        }
+
+        .select-products-body {
+            padding: 26px;
+            border-bottom: 1px solid var(--border-color);
+
+            .radio-button-text-alignment-space-remove {
+                padding-bottom: 0px !important;
+            }
+
+            .sub-title-content-alignment {
+                h3 {
+                    @include text-sm;
+                    color: var(--black-1);
+                    margin: 0 0 22px 0;
+                }
+
+                .radio-button-text-alignment {
+                    @include flex-center;
+                    padding: 0 0 20px 0;
+
+                    div+div {
+                        padding-left: 15px;
+
+                        span {
+                            @include text-sm;
+                            color: var(--dark-black);
+                            display: block;
+                        }
+                    }
+
+                    div {
+                        @include flex-center;
+
+                        input[type="radio"] {
+                            width: 20px;
+                            height: 20px;
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .select-products-header {
+            @include flex-center;
+            justify-content: space-between;
+            padding: 26px 32px;
+            border-bottom: 1px solid var(--border-color);
+
+            div {
+                img {
+                    @include pointer;
+                }
+
+                h4 {
+                    @include heading-4;
+                    color: var(--dark-black);
+                    margin: 0;
+                    @include font-normal;
+                }
+            }
+        }
+    }
+}

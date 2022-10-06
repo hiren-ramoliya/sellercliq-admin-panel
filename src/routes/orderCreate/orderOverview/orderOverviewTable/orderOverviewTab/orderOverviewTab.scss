@@ -1,0 +1,22 @@
+@import '../../../../../assets/styles/mixins/global.scss';
+
+.order-overview-tab-design {
+    ul {
+        margin: 0;
+        padding: 0 0 21px 0;
+        @include flex-center;
+        list-style: none;
+        border-bottom: 1px solid var(--border-color);
+
+        li:first-child {
+            padding-left: 25px;
+        }
+
+        li {
+            padding-right: 40px;
+            @include text-sm;
+            color: var(--dark-black);
+            @include pointer;
+        }
+    }
+}

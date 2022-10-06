@@ -1,0 +1,128 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.import-customer-csv-modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 9999999;
+    height: 100%;
+    @include flex-center;
+    justify-content: center;
+
+    .modal-md {
+        width: calc(814px);
+        background-color: var(--bg-white);
+        border-radius: 10px;
+
+        .modal-footer {
+            padding: 26px;
+            @include flex-center;
+            justify-content: space-between;
+
+            div {
+                span {
+                    @include text-sm;
+                    color: var(--text-blue);
+                    display: block;
+                    @include pointer;
+                }
+
+                button {
+                    padding: 10px 14px;
+                    color: var(--bg-white);
+                    @include text-sm;
+                    @include font-bold;
+                    border: none;
+                    border-radius: 5px;
+                    @include pointer;
+                }
+
+                button:first-child {
+                    background-color: var(--danger-bg);
+                    margin-right: 27px;
+                }
+
+                button:last-child {
+                    background-color: var(--green-bg);
+                }
+            }
+        }
+
+        .modal-body {
+            padding: 26px;
+            border-bottom: 1px solid var(--border-color);
+
+            .overwrite-content-alignment {
+                padding: 26px 0 0 0;
+                @include flex-center;
+
+                div {
+                    @include flex-center;
+
+                    span {
+                        @include text-sm;
+                        color: var(--dark-black);
+                        display: block;
+                        position: relative;
+                        top: 5px;
+                        left: 15px;
+                    }
+                }
+            }
+
+            .add-file-button {
+                border: 1px dashed var(--border-color-1);
+                height: 196px;
+                @include flex-center;
+                justify-content: center;
+                border-radius: 5px;
+                @include pointer;
+
+                button {
+                    padding: 11px 34px;
+                    color: var(--text-blue);
+                    @include pointer;
+                    @include text-sm;
+                    @include font-medium;
+                    background-color: var(--bg-light-3);
+                    border-radius: 5px;
+                    border: none;
+                }
+            }
+
+            .child-text-alignment {
+                p {
+                    @include text;
+                    color: var(--dark-black);
+                    margin: 0 0 26px 0;
+                    max-width: 624px;
+
+                    span {
+                        color: var(--text-blue);
+                        @include pointer;
+                    }
+
+                    a {
+                        text-decoration: underline;
+                        color: var(--text-blue);
+                    }
+                }
+            }
+        }
+
+        .modal-header {
+            padding: 32px 26px;
+            border-bottom: 1px solid var(--border-color);
+            @include flex-center;
+            justify-content: space-between;
+
+            h1 {
+                @include heading-4;
+                color: var(--dark-black);
+                margin: 0;
+            }
+        }
+    }
+}

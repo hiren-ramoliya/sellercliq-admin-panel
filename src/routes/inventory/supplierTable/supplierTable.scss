@@ -1,0 +1,25 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.supplier-table-content-alignment {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        tr {
+            th {
+                padding: 27px 10px;
+                border-bottom: 1px solid var(--border-color);
+                @include text-sm;
+                @include font-medium;
+                color: var(--dark-black);
+            }
+
+            td {
+                padding: 27px 10px;
+                border-bottom: 1px solid var(--border-color);
+                @include text-sm;
+                color: var(--dark-black);
+            }
+        }
+    }
+}

@@ -1,0 +1,176 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.all-product-modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 9999999;
+    height: 100%;
+    @include flex-center;
+    justify-content: center;
+
+    .all-product-modal {
+        width: calc(814px);
+        background-color: var(--bg-white);
+        border-radius: 10px;
+
+        .all-product-modal-footer {
+            padding: 26px 26px 26px 26px;
+            @include flex-center;
+            justify-content: space-between;
+
+
+            .right-side-button-style {
+                button {
+                    border: none;
+                    padding: 11px 23px;
+                    color: var(--bg-white);
+                    border-radius: 5px;
+                    @include text-sm;
+                    @include font-bold;
+                    @include pointer;
+                }
+
+                button:first-child {
+                    background-color: var(--danger-bg);
+                    margin-right: 18px;
+                }
+
+                button:last-child {
+                    background-color: var(--green-bg);
+                }
+            }
+
+            .select-button-style {
+                button {
+                    background-color: transparent;
+                    border: 1px solid var(--border-color-4);
+                    border-radius: 5px;
+                    padding: 10px 18px;
+                    @include text-sm;
+                    @include font-medium;
+                    @include pointer;
+                }
+            }
+        }
+
+        .all-product-modal-body {
+            max-height: 60vh;
+            .product-details-alignment:first-child {
+                border-top: 1px solid var(--border-color);
+            }
+
+            .product-details-alignment {
+                @include flex-center;
+                border-bottom: 1px solid var(--border-color);
+                padding: 35px 26px;
+                justify-content: space-between;
+
+                .last-div-alignment {
+                    @include flex-center;
+
+                    p+p {
+                        padding-left: 17px;
+                    }
+
+                    p {
+                        @include pointer;
+                        @include text-sm;
+                        color: var(--dark-black);
+                        margin: 0;
+                    }
+                }
+
+                .data-show {
+                    @include flex-center;
+
+                    div {
+                        span {
+                            @include text-sm;
+                            color: var(--dark-black);
+                            display: block;
+                            padding-left: 26px;
+
+                        }
+                    }
+
+                    img {
+                        max-width: 150px;
+                        max-height: 100px
+                    }
+                }
+
+                .first-div-alignment {
+                    @include flex-center;
+
+                    .checkbox-alignment {
+                        padding-right: 32px;
+                    }
+                }
+            }
+        }
+
+        .all-product-filter {
+            padding: 0 26px 26px 26px;
+
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr 125px;
+                gap: 21px;
+
+                .grid-items {
+                    button {
+                        border: 1px solid var(--border-color);
+                        background-color: transparent;
+                        @include text-sm;
+                        height: 54px;
+                        @include flex-center;
+                        justify-content: center;
+                        padding: 8px 11px;
+                        width: 100%;
+                        @include pointer;
+                        border-radius: 5px;
+                        color: var(--black-3);
+
+                        span {
+                            padding-left: 8px;
+                            display: block;
+                            @include font-medium;
+                        }
+                    }
+                }
+            }
+        }
+
+        .all-product-modal-header {
+            padding: 32px 26px 40px 26px;
+            @include flex-center;
+            justify-content: space-between;
+
+            div:first-child {
+                @include pointer;
+
+                h5 {
+                    padding-left: 16px;
+                }
+            }
+
+            div {
+                @include flex-center;
+
+                h5 {
+                    @include heading-4;
+                    color: var(--dark-black);
+                    @include font-normal;
+                    margin: 0;
+                }
+
+                img {
+                    @include pointer;
+                }
+            }
+        }
+    }
+}

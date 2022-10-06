@@ -1,0 +1,332 @@
+@import '../../../../assets/styles/mixins/global.scss';
+
+.order-overview-table-alignment {
+    background-color: var(--bg-white);
+    padding: 19px 3px;
+    border-radius: 10px;
+
+    .table-filter {
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        gap: 16px;
+        padding: 23px 29px 0 29px;
+
+        .table-filter-items {
+            .more-menu-relative {
+                position: relative;
+
+                .more-menu-dropdown-hidden {
+                    max-height: 0px;
+                    overflow: hidden;
+                    transition: .3s ease-in-out;
+                }
+
+                .more-menu-dropdown-show {
+                    max-height: calc(100vh - 0px);
+                    overflow: hidden;
+                    transition: .3s ease-in-out;
+                }
+
+                .more-menu-dropdown {
+                    position: absolute;
+                    right: 0;
+                    background-color: var(--bg-white);
+                    box-shadow: 0px 7px 69px rgba(0, 0, 0, 0.07);
+                    border-radius: 5px;
+                    z-index: 999;
+                    width: 136px;
+                    top: 60px;
+
+                    .more-menu-dropdown-style {
+                        padding: 26px;
+
+                        span:last-child {
+                            padding: 0;
+                        }
+
+                        span {
+                            display: block;
+                            @include text-sm;
+                            color: var(--black-3);
+                            @include pointer;
+                            padding: 0 0 11px 0;
+                            @include font-medium;
+                        }
+                    }
+                }
+
+            }
+
+            .sort-button-relative {
+                position: relative;
+
+                .sort-dropdown-hidden {
+                    max-height: 0px;
+                    overflow: hidden;
+                    transition: .3s ease-in-out;
+                }
+
+                .sort-dropdown-show {
+                    max-height: 400px;
+                    overflow: auto;
+                    transition: .3s ease-in-out;
+                }
+
+                .sort-dropdown-design {
+                    position: absolute;
+                    right: 0;
+                    background-color: var(--bg-white);
+                    box-shadow: 0px 7px 69px rgba(0, 0, 0, 0.07);
+                    border-radius: 5px;
+                    z-index: 999;
+                    width: 290px;
+                    top: 60px;
+
+                    .sort-dropdown-design-style {
+                        padding: 26px;
+
+                        .only-text-alignment {
+                            padding-left: 32px;
+
+                            span:first-child {
+                                color: var(--text-blue);
+                            }
+
+                            span {
+                                @include text-sm;
+                                color: var(--black-1);
+                                @include pointer;
+                                display: block;
+                                padding: 0 0 10px 0;
+                            }
+                        }
+
+                        .radio-text-alignment {
+                            @include flex-center;
+                            padding: 0 0 18px 0;
+
+                            div+div {
+                                padding-left: 10px;
+                            }
+
+                            div {
+                                @include flex-center;
+
+                                span {
+                                    @include text-sm;
+                                    color: var(--black-1);
+                                    display: block;
+                                }
+
+                                input[type="radio"] {
+                                    width: 20px;
+                                    height: 20px;
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .colums-section-relative {
+                position: relative;
+
+                .colums-section-dropdown-hidden {
+                    max-height: 0px;
+                    transition: .3s ease-in-out;
+                    overflow: hidden;
+                }
+
+                .colums-section-dropdown-show {
+                    max-height: 450px;
+                    overflow: auto;
+                    transition: .3s ease-in-out;
+                }
+
+                .colums-section-dropdown {
+                    position: absolute;
+                    right: 0;
+                    background-color: var(--bg-white);
+                    box-shadow: 0px 7px 69px rgba(0, 0, 0, 0.07);
+                    border-radius: 5px;
+                    z-index: 999;
+                    width: 290px;
+                    top: 60px;
+
+
+                    .colums-section-dropdown-style {
+                        padding: 26px;
+
+                        .checkbox-text-alignment-new:last-child {
+                            padding: 0;
+                        }
+
+                        .checkbox-text-alignment-new {
+                            @include flex-center;
+                            padding: 0 0 10px 0;
+
+                            div+div {
+                                padding-left: 15px;
+                            }
+
+                            div {
+                                @include flex-center;
+
+                                span {
+                                    @include text-sm;
+                                    color: var(--black-1);
+                                    display: block;
+                                    padding: 8px 0 0 0;
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+            }
+
+            .filter-dropdown-relative {
+                position: relative;
+
+                .filter-dropdown-hidden {
+                    max-height: 0px;
+                    overflow: hidden;
+                    transition: .3s ease-in-out;
+                }
+
+                .filter-dropdown-show {
+                    max-height: calc(100vh - 10px);
+                    overflow: hidden;
+                    transition: .3s ease-in-out;
+                }
+
+                .filter-list-modal-hidden {
+                    max-height: 0px;
+                    overflow: hidden;
+                    transition: .3s ease-in-out;
+                }
+
+                .filter-list-modal-show {
+                    max-height: 350px;
+                    overflow: auto;
+                    transition: .3s ease-in-out;
+                }
+
+                .filter-list-modal {
+                    position: absolute;
+                    width: 290px;
+                    top: 190px;
+                    right: 190px;
+                    z-index: 99999;
+                    background-color: var(--bg-white);
+                    box-shadow: 0px 7px 69px rgba(0, 0, 0, 0.07);
+                    border-radius: 5px;
+
+                    .filter-list-modal-style {
+
+                        padding: 26px;
+
+                        span:last-child {
+                            padding: 0;
+                        }
+
+                        span {
+                            display: block;
+                            @include text-sm;
+                            color: var(--black-1);
+                            padding: 0 0 18px 0;
+                            @include pointer;
+                        }
+                    }
+                }
+
+                .no-filter-dropdown {
+                    position: absolute;
+                    width: 346px;
+                    right: 0;
+                    background-color: var(--bg-white);
+                    box-shadow: 0px 7px 69px rgba(0, 0, 0, 0.07);
+                    border-radius: 5px;
+                    z-index: 999;
+                    top: 60px;
+
+                    .no-filter-dropdown-style {
+
+                        padding: 26px;
+
+                        .content-alignment-relative {
+                            position: relative;
+
+
+                        }
+
+                        .content-alignment {
+                            @include flex-center;
+                            justify-content: space-between;
+                            position: relative;
+
+
+                            div {
+                                @include flex-center;
+
+                                img {
+                                    @include pointer;
+                                }
+
+                                button {
+                                    border: 1px solid var(--border-color);
+                                    background-color: transparent;
+                                    @include pointer;
+                                    padding: 18px 16px;
+                                    border-radius: 5px;
+                                    @include flex-center;
+                                    justify-content: center;
+
+                                    span {
+                                        padding-right: 10px;
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+
+                        p {
+                            @include text-sm;
+                            color: var(--black-3);
+                            margin: 0 0 18px 0;
+                        }
+                    }
+                }
+            }
+
+            .all-filter-grid {
+                display: grid;
+                grid-template-columns: 99px 120px 94px 56px;
+                gap: 16px;
+
+                .all-filter-grid-items {
+                    button {
+                        border: 1px solid var(--border-color);
+                        background-color: transparent;
+                        @include text-sm;
+                        color: var(--dark-black);
+                        @include pointer;
+                        @include font-medium;
+                        border-radius: 5px;
+                        width: 100%;
+                        height: 54px;
+                        @include flex-center;
+                        justify-content: center;
+
+                        span {
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

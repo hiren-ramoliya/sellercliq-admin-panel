@@ -1,0 +1,129 @@
+@import "../../assets/styles/mixins/global.scss";
+
+.sidebar-sticky {
+}
+
+.sidebar {
+  width: 100%;
+  height: calc(100vh - 88px);
+  position: sticky;
+  overflow: auto;
+  overflow-x: hidden;
+  z-index: 999;
+  top: 88px;
+  background-color: var(--bg-white);
+
+  .sidebar-alignment {
+    padding: 30px 0;
+
+    .sidebar-menu-sub-close {
+      display: none;
+    }
+
+    .sidebar-menu-sub {
+      padding-top: 13px;
+      padding-left: 66px;
+
+      a {
+        display: block;
+        color: var(--light-text-2);
+        display: block;
+        padding: 0 0 17px 0;
+        @include pointer;
+        @include text-sm;
+      }
+
+      .sublink-active {
+        color: var(--green-bg);
+      }
+    }
+
+    .sidebar-menu-active {
+      &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 3px;
+        bottom: 0;
+        border-radius: 0px 50px 50px 0px;
+        left: 0;
+        background-color: var(--green-bg);
+      }
+
+      background-color: rgba(40, 199, 111, 0.08);
+      div {
+        span {
+          color: #28c76f !important;
+        }
+      }
+    }
+
+    .sidebar-menu {
+      padding: 11px 34px 11px 34px;
+      transition: 0.3s ease-in-out;
+      // border-radius: 0px 50px 50px 0px;
+      @include flex-center;
+      @include pointer;
+      position: relative;
+      position: relative;
+
+      &:hover {
+        &::before {
+          opacity: 1;
+          transform: scaleY(1);
+          opacity: 1;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 3px;
+        bottom: 0;
+        border-radius: 0px 50px 50px 0px;
+        left: 0;
+        background-color: var(--green-bg);
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 0;
+        transition: opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+      }
+
+      &:hover {
+      }
+
+      &:hover {
+        background-color: var(--green-bg-light);
+        // border-radius: 0 4px 4px 0;
+        transition: 0.3s ease-in-out;
+        // border-left: 3px solid var(--green-bg);
+
+        div {
+          span {
+            color: var(--green-bg);
+          }
+        }
+      }
+
+      div + div {
+        padding-left: 8px;
+      }
+
+      div {
+        @include flex-center;
+
+        span {
+          @include text-bold;
+          @include font-normal;
+          color: var(--dark-black);
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

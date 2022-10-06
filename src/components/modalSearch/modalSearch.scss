@@ -1,0 +1,36 @@
+@import '../../assets/styles/mixins/global.scss';
+
+.modal-search-input-design {
+    .input-relative {
+        position: relative;
+
+        .icon-alignment {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 18px;
+            @include flex-center;
+        }
+
+        input {
+            width: 100%;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background-color: transparent;
+            height: 54px;
+            padding-left: 50px;
+            padding-right: 14px;
+            @include text-sm;
+            color: var(--dark-black);
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        ::placeholder {
+            @include text-sm;
+            color: var(--dark-black-opacity);
+        }
+    }
+}

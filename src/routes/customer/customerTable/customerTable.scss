@@ -1,0 +1,165 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.customer-table-alignment {
+    .customer-table-responsive {
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+            tr {
+                border-bottom: 1px solid var(--border-color);
+
+                th:first-child {
+                    padding-left: 20px;
+                }
+
+                td:first-child {
+                    padding-left: 20px;
+                }
+
+                td {
+                    padding: 32px 10px;
+                    @include text-sm;
+                    color: var(--dark-black);
+
+                    span {
+                        display: block;
+                    }
+                }
+
+                th {
+                    padding: 0 10px 18px 10px;
+                    @include text;
+                    color: var(--dark-black);
+
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .table-design {
+        background-color: var(--bg-white);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+        border-radius: 10px;
+
+        .search-grid-alignment {
+            padding: 26px;
+
+            .search-grid {
+                display: grid;
+                grid-template-columns: 1fr 94px;
+                gap: 0 16px;
+
+                .search-grid-items {
+                    .sort-by-relative-div {
+                        position: relative;
+
+                        .sort-by-dopdown-hidden {
+                            max-height: 0px;
+                            overflow: hidden;
+                            transition: .3s ease-in-out;
+                        }
+
+                        .sort-by-dopdown-show {
+                            max-height: calc(100vh - 15px);
+                            overflow: hidden;
+                            transition: .3s ease-in-out;
+                        }
+
+                        .sort-by-dopdown {
+                            position: absolute;
+                            right: 0;
+                            top: 60px;
+                            width: 290px;
+                            background-color: var(--bg-white);
+                            box-shadow: 0px 7px 69px rgba(0, 0, 0, 0.07);
+                            border-radius: 5px;
+
+                            .dropdown-footer {
+                                box-shadow: 0px 7px 69px rgba(0, 0, 0, 0.07);
+                                border-radius: 0px 0px 5px 5px;
+                                background-color: var(--bg-white);
+                                padding: 18px 26px;
+
+                                div+div {
+                                    margin: 10px 0 0 0;
+                                }
+
+                                div {
+                                    width: 100%;
+                                    background-color: var(--bg-light-3);
+                                    padding: 4px 22px;
+                                    @include flex-center;
+                                    @include pointer;
+                                    @include text;
+                                    border-radius: 5px;
+                                    color: var(--black-1);
+
+                                    span {
+                                        padding-left: 16px;
+                                    }
+                                }
+                            }
+
+                            .sort-by-dopdown-alignment {
+                                padding: 26px;
+                                max-height: calc(622px - 300px);
+                                overflow: auto;
+                                overflow-x: hidden;
+
+                                .radio-button-text-alignment {
+                                    @include flex-center;
+                                    padding: 0 0 16px 0;
+                                    @include pointer;
+
+                                    div+div {
+                                        padding-left: 14px;
+                                    }
+
+                                    div {
+                                        @include flex-center;
+
+                                        span {
+                                            @include text-sm;
+                                            color: var(--black-1);
+                                            display: block;
+                                        }
+
+                                        input[type="radio"] {
+                                            width: 20px;
+                                            height: 20px;
+                                            margin: 0;
+                                            padding: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        button {
+                            width: 100%;
+                            height: 54px;
+                            border: 1px solid var(--border-color);
+                            border-radius: 5px;
+                            @include pointer;
+                            @include text-sm;
+                            @include font-medium;
+                            color: var(--dark-black);
+                            background-color: transparent;
+                            padding: 4px;
+                            @include flex-center;
+                            justify-content: center;
+
+                            span {
+                                padding-left: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

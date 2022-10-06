@@ -1,0 +1,32 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.inventory-globally-search-alignment {
+    padding: 23px 26px 0 26px;
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 94px;
+        gap: 16px;
+
+        .grid-items {
+            button {
+                border: 1px solid var(--border-color);
+                border-radius: 5px;
+                height: 54px;
+                padding: 10px 10px;
+                @include flex-center;
+                justify-content: center;
+                background-color: transparent;
+                @include pointer;
+
+                span {
+                    display: block;
+                    padding-left: 10px;
+                    @include text-sm;
+                    @include font-medium;
+                    color: var(--dark-black);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import '../../../src/assets/styles/mixins/global.scss';
+
+.filter-action-box-alignment {
+    border: 1px solid var(--border-color);
+    width: 100%;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.03));
+    border-radius: 5px;
+    height: 54px;
+    @include flex-center;
+
+    .more-filter-button {
+        button {
+            border: none;
+            padding: 12px;
+            @include flex-center;
+            justify-content: center;
+            @include text-sm;
+            color: var(--dark-black);
+            @include font-medium;
+            @include pointer;
+            background-color: transparent;
+        }
+    }
+
+    .balance-button {
+        button {
+            border: none;
+            border-right: 1px solid var(--border-color);
+            padding: 16px;
+            @include flex-center;
+            @include text-sm;
+            color: var(--dark-black);
+            @include font-medium;
+            @include pointer;
+            background-color: transparent;
+
+            span {
+                padding-right: 18px;
+            }
+        }
+    }
+
+    .statues-button {
+        button {
+            width: 130px;
+            padding: 16px;
+            background-color: transparent;
+            @include flex-center;
+            justify-content: space-between;
+            border: none;
+            @include pointer;
+            @include text-sm;
+            @include font-medium;
+            color: var(--dark-black);
+            border-right: 1px solid var(--border-color);
+        }
+    }
+}

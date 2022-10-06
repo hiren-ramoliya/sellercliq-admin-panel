@@ -1,0 +1,35 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.inventory-header-content-alignment {
+    padding: 28px 0 34px 0;
+    @include flex-center;
+    justify-content: space-between;
+
+    div {
+        h2 {
+            @include heading-4;
+            color: var(--black-1);
+            margin: 0;
+        }
+    }
+
+    div+div {
+        @include flex-center;
+
+        span {
+            @include text-sm;
+            @include font-medium;
+            display: block;
+            @include pointer;
+            color: var(--dark-blacl);
+        }
+
+        .green-button {
+            margin-left: 42px;
+
+            button {
+                padding: 13px 45px;
+            }
+        }
+    }
+}

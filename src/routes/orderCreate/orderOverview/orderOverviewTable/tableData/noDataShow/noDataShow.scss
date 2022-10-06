@@ -1,0 +1,28 @@
+@import '../../../../../../assets/styles/mixins/global.scss';
+
+.no-data-table-show-alignment {
+    padding: 93px 0 136px 0;
+
+    .icon-center-alignment {
+        @include flex-center;
+        justify-content: center;
+        @include pointer;
+        padding: 0 0 30px 0;
+    }
+
+    h5 {
+        @include heading-4;
+        @include font-normal;
+        color: var(--black-3);
+        @include text-center;
+        margin: 0 0 22px 0;
+    }
+
+    p {
+        @include text-center;
+        @include text;
+        color: var(--black-3);
+        opacity: .6;
+    }
+
+}

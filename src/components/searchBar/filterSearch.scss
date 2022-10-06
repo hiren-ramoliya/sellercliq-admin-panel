@@ -1,0 +1,46 @@
+@import '../../../src/assets/styles/mixins/global.scss';
+
+.filter-search-section-design {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 356px 110px 94px;
+        gap: 16px;
+
+        .grid-items {
+            .sort-button {
+                button {
+                    background-color: transparent;
+                    border: 1px solid var(--border-color);
+                    border-radius: 5px;
+                    @include text-sm;
+                    padding: 16px;
+                    @include font-medium;
+                    color: var(--dark-black);
+                    @include font-medium;
+                    @include pointer;
+
+                    span {
+                        padding-left: 10px;
+                    }
+                }
+            }
+
+            .saved-button {
+                button {
+                    background-color: transparent;
+                    border: 1px solid var(--border-color);
+                    border-radius: 5px;
+                    padding: 15px;
+                    @include flex-center;
+                    @include text-sm;
+                    @include font-medium;
+                    @include pointer;
+
+                    span {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

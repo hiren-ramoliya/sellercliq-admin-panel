@@ -1,0 +1,124 @@
+@import '../../assets/styles/mixins/global.scss';
+
+.create-customer-section-alignment {
+    padding: 0 43px;
+
+    .create-customer-header-alignment {
+        @include flex-center;
+        justify-content: space-between;
+
+        .customer-header-alignment {
+            padding: 32px 0;
+            border-bottom: 1px solid var(--border-color);
+            width: 100%;
+            @include flex-center;
+
+            div {
+                width: 40px;
+                border-radius: 5px;
+                border: 1px solid #A2A2A2;
+                @include flex-center;
+                justify-content: center;
+                @include pointer;
+                height: 35px;
+                margin-right: 20px;
+            }
+
+            h1 {
+                color: var(--black-1);
+                @include heading-4;
+                margin: 0;
+            }
+        }
+    }
+
+
+}
+
+.all-preview-section-alignment {
+    // padding: 32px 0 0 0;
+
+    .preview-grid {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 102px;
+        padding: 32px 0;
+        border-bottom: 1px solid var(--border-color);
+
+        .preview-grid-items {
+            h2 {
+                @include text;
+                color: var(--black-1);
+                @include font-medium;
+            }
+
+            .white-box {
+                padding: 32px 24px;
+                border-radius: 10px;
+                background-color: var(--bg-white);
+
+                .box-last-child-text {
+                    padding: 20px 0 0 0;
+
+                    p {
+                        @include text-sm;
+                        color: #6D7175;
+                        max-width: 570px;
+                        margin: 0;
+                    }
+                }
+
+                .all-checkbox-text-alignment {
+                    padding: 26px 0 0 0;
+
+                    .checkbox-text-alignment:last-child {
+                        margin: 0;
+
+                    }
+
+                    .checkbox-text-alignment {
+                        @include flex-center;
+                        margin: 0 0 20px 0;
+
+                        div+div {
+                            padding-left: 13px;
+
+                            span {
+                                display: block;
+                                @include text-sm;
+                                position: relative;
+                                top: 3px;
+                                color: #6D7175;
+                            }
+                        }
+                    }
+                }
+
+                .first-col-grid-bottom-sapce-remove {
+                    padding: 0 !important;
+                }
+
+                .first-col-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 80px;
+                    padding: 0 0 20px 0;
+                }
+
+                .form-control-bottom-alignment {
+                    padding: 0 0 20px 0;
+                }
+
+                .contact-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 85px;
+                    gap: 16px;
+                }
+
+                .contanct-grid-alignment {
+                    padding: 0 0 20px 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@use "./../mixins/breakpoint";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@import './../scss/font';
+
+@mixin heading-4 {
+  font-size: 20px;
+  font-family: var(--default-font-family);
+  line-height: 30px;
+  @include font-medium;
+}
+
+@mixin heading-3 {
+  font-size: 26px;
+  font-family: var(--default-font-family);
+  line-height: 39px;
+  @include font-bold;
+}
+
+@mixin heading-5 {
+  font-size: 24px;
+  font-family: var(--default-font-family);
+  line-height: 36px;
+  @include font-normal;
+}
+
+@mixin text-sm {
+  font-size: 14px;
+  font-family: var(--default-font-family);
+  line-height: 21px;
+  @include font-normal;
+}
+
+@mixin text-bold {
+  font-size: 16px;
+  font-family: var(--default-font-family);
+  line-height: 24px;
+  @include font-bold;
+}
+
+@mixin text {
+  font-size: 16px;
+  font-family: var(--default-font-family);
+  line-height: 24px;
+  @include font-normal;
+}
+
+@mixin text-xs {
+  font-size: 12px;
+  font-family: var(--default-font-family);
+  line-height: 18px;
+  @include font-normal;
+}

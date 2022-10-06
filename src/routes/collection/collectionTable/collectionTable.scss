@@ -1,0 +1,64 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.collection-table-design {
+    background-color: var(--bg-white);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+
+    .table-header {
+        padding: 26px 36px;
+        border-bottom: 1px solid var(--border-color);
+
+        p {
+            @include text;
+            color: var(--dark-black);
+        }
+    }
+
+    .table-section-alignment {
+        padding: 23px 26px;
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 238px 110px 95px;
+            gap: 16px;
+
+            .grid-items {
+                .sort-button {
+                    button {
+                        background-color: transparent;
+                        border: 1px solid var(--border-color);
+                        border-radius: 5px;
+                        @include text-sm;
+                        padding: 16px;
+                        @include font-medium;
+                        color: var(--dark-black);
+                        @include font-medium;
+                        @include pointer;
+
+                        span {
+                            padding-left: 10px;
+                        }
+                    }
+                }
+
+                .saved-button {
+                    button {
+                        background-color: transparent;
+                        border: 1px solid var(--border-color);
+                        border-radius: 5px;
+                        padding: 15px;
+                        @include flex-center;
+                        @include text-sm;
+                        @include font-medium;
+                        @include pointer;
+
+                        span {
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

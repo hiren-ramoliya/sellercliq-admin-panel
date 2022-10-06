@@ -1,0 +1,101 @@
+@import '../../../../assets/styles/mixins/global.scss';
+
+.order-process-section-alignment {
+    background-color: var(--dark-black);
+    border-radius: 10px;
+
+    .grid {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 0;
+        margin: 0 0 21px 0;
+
+        .grid-items:nth-child(1) {
+            border-right: 1px solid var(--border-color-5);
+            padding: 0 11px 0 11px;
+            @include flex-center;
+
+        }
+
+        .grid-items {
+
+            .time-box-alignment {
+                @include flex-center;
+                padding-left: 30px;
+
+                div {
+                    @include pointer;
+
+                    span {
+                        @include text;
+                        color: var(--bg-white);
+                        display: block;
+                        padding-right: 5px;
+                    }
+                }
+            }
+
+
+            .sub-grid {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 0;
+
+                .sub-grid-items {
+                    border-right: 1px solid var(--border-color-5);
+                    padding: 18px 23px 24px 23px;
+                    position: relative;
+
+                    &::before {
+                        background-image: url("../../../../assets/images/chart-image.png");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        position: absolute;
+                        bottom: 0;
+                        right: 11px;
+                        content: "";
+                        width: 66px;
+                        height: 55px;
+                    }
+
+                    .child-text-alignment {
+                        @include flex-center;
+
+                        .dis {
+                            h6 {
+                                @include text-xs;
+                                color: var(--bg-white);
+                                opacity: .6;
+                                margin: 0;
+                                padding-left: 6px;
+                            }
+                        }
+
+                        .time-box-alignment-new {
+                            @include flex-center;
+
+                            div {
+                                @include pointer;
+
+                                span {
+                                    @include text;
+                                    color: var(--bg-white);
+                                    display: block;
+                                    padding-right: 5px;
+                                }
+                            }
+                        }
+                    }
+
+                    .box-style {
+                        p {
+                            @include text-sm;
+                            color: var(--bg-white);
+                            margin: 0 0 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

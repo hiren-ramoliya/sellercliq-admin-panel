@@ -1,0 +1,23 @@
+@mixin pointer {
+    cursor: map-get($layout, pointer );
+}
+
+@mixin text-center {
+    text-align: map-get($layout, center );
+}
+
+@mixin relative {
+    position: map-get($layout, relative );
+}
+
+@mixin grid {
+    display: map-get($layout, grid );
+}
+
+@mixin text-capitalize {
+    text-transform: capitalize;
+}
+
+@mixin normal-radius {
+    border-radius: 8px;
+}

@@ -1,0 +1,70 @@
+@import '../../../assets/styles/mixins/global.scss';
+
+.categories-table-design {
+    .categories-table-box {
+        background-color: var(--bg-white);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+        border-radius: 10px;
+
+        .cartegories-table-design {
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                vertical-align: baseline;
+
+                .checkbox-image-alignment {
+                    @include flex-center;
+
+                    div+div {
+                        padding-left: 30px;
+                    }
+                }
+
+                tr {
+                    border-bottom: 1px solid var(--border-color);
+
+                    th {
+                        padding: 0 12px 12px 12px;
+
+                        span {
+                            @include text-sm;
+                            color: var(--dark-black);
+                            @include font-medium;
+                            display: block;
+                        }
+                    }
+
+                    td {
+                        padding: 12px;
+
+                        span {
+                            @include text-sm;
+                            color: var(--dark-black);
+                            @include font-medium;
+                            display: block;
+                        }
+
+                        .font-normal-table {
+                            font-weight: 400 !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .categories-search-section-alignment {
+            padding: 23px 26px;
+        }
+
+        .table-header {
+            padding: 26px 36px;
+            border-bottom: 1px solid var(--border-color);
+
+            p {
+                @include text;
+                color: var(--dark-black);
+                margin: 0;
+            }
+        }
+    }
+}
